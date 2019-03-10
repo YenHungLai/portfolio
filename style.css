@@ -1,0 +1,121 @@
+/* select everything */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #333;
+    color: #fff;
+    /* line-height: 1.6; */
+    /* View port height */
+    height: 100vh;
+    overflow: hidden;
+}
+
+a:link, a:visited {
+    color: white;
+}
+
+button {
+    background-color: transparent;
+    border: 2pxpx solid white;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    top: 1rem;
+    transition-duration: 0.4s;
+    outline: none;
+    padding: 5px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /* CSS smooth scroll */
+    overflow-y: scroll;
+    /* Add vertical scroll bar. */
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.links {
+    margin-top: 1rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7)
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li {
+    /* 0 for top and bottom, 1rem for left and right. */
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    /* Remove underline. */
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+    color: skyblue;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    /* Both horizontal and vertical to center. */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+section #name {
+    color: salmon;
+}
+
+section h1 {
+    font-size: 4rem;
+}
+
+section p {
+    font-size: 1.5rem;
+}
+
+/* Section Images */
+section#home {
+    background: url('https://source.unsplash.com/9oK61bbs6EI/1600x900') no-repeat center center/cover;
+}
+
+section#about {
+    background: url('https://source.unsplash.com/jBi9ILh7aWU/1600x900') no-repeat center center/cover;
+}
+
+section#projects {
+    background: url('https://source.unsplash.com/XIb5sgUF-kI/1600x900') no-repeat center center/cover;
+}
+
+section#contact {
+    background: url('https://source.unsplash.com/mlALnhz-_0g/1600x900') no-repeat center center/cover;
+}
