@@ -84,6 +84,40 @@ button:hover {
     color: skyblue;
 }
 
+.projects {
+
+}
+
+.project {
+    display: flex;
+}
+
+.projectIcon {
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.61);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.description {
+    margin-left: 1rem;
+}
+
+.description p{
+    position: relative;
+    top: 30%
+}
+
 section {
     display: flex;
     flex-direction: column;
