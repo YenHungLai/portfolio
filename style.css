@@ -21,7 +21,8 @@ a:link, a:visited {
 
 .btn {
 	text-transform: uppercase;
-	text-decoration: none;
+    text-decoration: none;
+    letter-spacing: 2px;
 	border-radius: 100px;
 	/* Inline elements are treated as if they are texts */
 	display: inline-block;
@@ -40,6 +41,32 @@ a:link, a:visited {
     animation: moveInBottom .5s ease-out .75s;
     /* Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). */
     animation-fill-mode: backwards;
+}
+
+/* 
+    The pseudo-element must be a child of the element to which it is being applied.  
+    The ::after selector inserts something after the content of each selected element(s).
+    Here we're placing an exact same button behind the button.
+*/
+.btn::after {
+    /* Used with the ::before and ::after pseudo-elements, to insert generated content. */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    background: #fff;
+}
+
+/* When hovering the button it scales and becomes opaque */
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
 
 @keyframes moveInBottom {
