@@ -1,28 +1,29 @@
 /* select everything */
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background: #333;
-    color: #fff;
-    /* line-height: 1.6; */
-    /* View port height */
-    height: 100vh;
-    overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+	background: #333;
+	color: #fff;
+	/* line-height: 1.6; */
+	/* View port height */
+	height: 100vh;
+	overflow: hidden;
 }
 
-a:link, a:visited {
-    color: white;
-    text-decoration: none;
+a:link,
+a:visited {
+	color: white;
+	text-decoration: none;
 }
 
 .btn {
 	text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
+	text-decoration: none;
+	letter-spacing: 2px;
 	border-radius: 100px;
 	/* Inline elements are treated as if they are texts */
 	display: inline-block;
@@ -32,15 +33,15 @@ a:link, a:visited {
     */
 	padding: 15px 40px;
 	/* Default value. All properties will get a transition effect */
-    transition: all 0.2s;
-    position: relative;
-    top: 5%;
-    background: #fff;
-    color: black !important;
-    
-    animation: moveInBottom .5s ease-out .75s;
-    /* Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). */
-    animation-fill-mode: backwards;
+	transition: all 0.2s;
+	position: relative;
+	top: 5%;
+	background: #fff;
+	color: black !important;
+
+	animation: moveInBottom 0.5s ease-out 0.75s;
+	/* Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). */
+	animation-fill-mode: backwards;
 }
 
 /* 
@@ -49,24 +50,24 @@ a:link, a:visited {
     Here we're placing an exact same button behind the button.
 */
 .btn::after {
-    /* Used with the ::before and ::after pseudo-elements, to insert generated content. */
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-    background: #fff;
+	/* Used with the ::before and ::after pseudo-elements, to insert generated content. */
+	content: '';
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	border-radius: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all 0.4s;
+	background: #fff;
 }
 
 /* When hovering the button it scales and becomes opaque */
 .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0;
 }
 
 @keyframes moveInBottom {
@@ -88,129 +89,141 @@ a:link, a:visited {
 }
 
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .container {
-    width: 100%;
-    height: 100%;
-    /* CSS smooth scroll */
-    overflow-y: scroll;
-    /* Add vertical scroll bar. */
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+	width: 100%;
+	height: 100%;
+	/* CSS smooth scroll */
+	overflow-y: scroll;
+	/* Add vertical scroll bar. */
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
 }
 
 .links {
-    margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    width: 100%;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.7)
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	width: 100%;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.7);
 }
 
 .navbar ul {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: center;
+	display: flex;
+	list-style: none;
+	width: 100%;
+	justify-content: center;
 }
 
 .navbar ul li {
-    /* 0 for top and bottom, 1rem for left and right. */
-    margin: 0 1rem;
-    padding: 1rem;
+	/* 0 for top and bottom, 1rem for left and right. */
+	margin: 0 1rem;
+	padding: 1rem;
 }
 
 .navbar ul li a {
-    /* Remove underline. */
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #f4f4f4;
+	/* Remove underline. */
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #f4f4f4;
 }
 
 .navbar ul li a:hover {
-    color: skyblue;
+	color: skyblue;
 }
 
 .projects {
-
 }
 
 .project {
-    display: flex;
+	display: flex;
 }
 
 .projectIcon {
-    border-radius: 50%;
-    animation: pulse 1s infinite;
+	border-radius: 50%;
+	animation: pulse 1s infinite;
 }
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.61);
-  }
-  70% {
-      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-  }
-  100% {
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-  }
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.61);
+	}
+	70% {
+		box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
 }
 
 .description {
-    margin-left: 1rem;
+	margin-left: 1rem;
 }
 
-.description p{
-    position: relative;
-    top: 30%
+.description p {
+	position: relative;
+	top: 30%;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    /* Both horizontal and vertical to center. */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-    scroll-snap-align: center;
+	display: flex;
+	flex-direction: column;
+	/* Both horizontal and vertical to center. */
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	scroll-snap-align: center;
 }
 
 section #name {
-    color: rgb(0, 0, 0);
+	color: rgb(0, 0, 0);
 }
 
 section h1 {
-    font-size: 4rem;
+	font-size: 4rem;
 }
 
 section p {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 /* Section Images */
 section#home {
-    background: url('img/4k-wallpaper-clouds-dawn-1261728.jpg') no-repeat center center/cover;
+	background: url('img/4k-wallpaper-clouds-dawn-1261728.jpg') no-repeat center
+		center/cover;
 }
 
 section#about {
-    background: url('img/cold-desktop-backgrounds-fog-1287367.jpg') no-repeat center center/cover;
+	background: url('img/cold-desktop-backgrounds-fog-1287367.jpg') no-repeat
+		center center/cover;
 }
 
 section#projects {
-    background: url('img/cc0-desktop-backgrounds-fog-7919.jpg') no-repeat center center/cover;
+	background: url('img/cc0-desktop-backgrounds-fog-7919.jpg') no-repeat center
+		center/cover;
 }
 
 section#contact {
-    background: url('img/backlit-chiemsee-dawn-1363876.jpg') no-repeat center center/cover;
+	background: url('img/backlit-chiemsee-dawn-1363876.jpg') no-repeat center
+		center/cover;
 }
+
+@media only screen and (max-width: 600px) {
+    section h1 {
+        font-size: 1rem;
+    }
+    section p {
+        font-size: 0.5rem;
+    }
+} 
