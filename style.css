@@ -221,9 +221,12 @@ section#contact {
 
 @media only screen and (max-width: 600px) {
     section h1 {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
     section p {
         font-size: 0.5rem;
+    }
+    .navbar ul li {
+        margin: 0 0.1px;
     }
 } 
