@@ -224,7 +224,14 @@ section#contact {
         font-size: 1.4rem;
     }
     section p {
-        font-size: 0.5rem;
+        font-size: 1rem;
+        margin: 0 1rem !important;
+    }
+    .projects {
+        margin: 1rem;
+    }
+    .project i {
+        font-size: 2rem;
     }
     .navbar ul li {
         margin: 0 0.1px;
